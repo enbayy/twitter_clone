@@ -39,7 +39,7 @@ const routes = createBrowserRouter([
                 element: <Premium />
             },
             {
-                path: '/:username',
+                path: ':slug',
                 element: <Profile />
             },
             {

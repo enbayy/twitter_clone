@@ -1,13 +1,26 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     currentAccount: {
         id: 1,
-        username: 'enes',
+        username: 'enbay',
+        fullName: 'enes',
         avatar: 'https://pbs.twimg.com/profile_images/1775365313996972033/UOAQarfj_400x400.jpg',
-        fullName: 'enbay'
     },
-    accounts: []
+    accounts: [
+        {
+            id: 1,
+            username: 'enbay',
+            fullName: 'enes',
+            avatar: 'https://pbs.twimg.com/profile_images/1775365313996972033/UOAQarfj_400x400.jpg',
+        },
+        {
+            id: 2,
+            username: 'asd',
+            fullName: 'das',
+            avatar: 'https://pbs.twimg.com/profile_images/1775365313996972033/UOAQarfj_400x400.jpg',
+        },
+    ]
 }
 
 const auth = createSlice({
@@ -24,7 +37,7 @@ const auth = createSlice({
             }
         },
         _setCurrentAccount: (state, action) => {
-            state.currentAccount = aciton.payload
+            state.currentAccount = action.payload
         }
     }
 })
