@@ -18,6 +18,8 @@ export default function Search() {
                     onChange={e => setQuery(e.target.value)} />
                 {query && (
                     <button
+                        type="button"
+                        onClick={() => setQuery('')}
                         className="w-[22px] h-[22px] rounded-full bg-[#1d9bf0] flex items-center justify-center text-black min-w-[22px] absolute right-3 top-1/2 -translate-y-1/2"><svg viewBox="0 0 15 15" width={10} height={10}><path fill="currentColor" d="M6.09 7.5L.04 1.46 1.46.04 7.5 6.09 13.54.04l1.42 1.42L8.91 7.5l6.05 6.04-1.42 1.42L7.5 8.91l-6.04 6.05-1.42-1.42L6.09 7.5z"></path></svg></button>
                 )}
             </label>
