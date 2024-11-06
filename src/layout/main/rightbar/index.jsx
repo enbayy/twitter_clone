@@ -1,6 +1,7 @@
 import Premium from "./premium";
 import Search from "./search";
 import Topics from "./topics";
+import WhoFollow from "./who-follow";
 
 
 export default function Rightbar() {
@@ -9,6 +10,7 @@ export default function Rightbar() {
             <Search />
             <Premium />
             <Topics />
+            <WhoFollow />
         </div>
     )
 }
