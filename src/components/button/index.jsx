@@ -10,7 +10,7 @@ export default function Button({ size, variant, children }) {
                 "px-4 h-9": size === 'normal',
                 "px-4 text-[17px] h-[52px] w-full": size === 'large',
                 "bg-[#1d9bf0] hover:bg-[#1a8cd8] text-white": variant === 'primary',
-                "bg-white text-black": variant === 'white'
+                "bg-[#eff3f4] hover:bg-[#d7dbdc] text-black": variant === 'white'
             })
     }, children)
 }

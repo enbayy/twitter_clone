@@ -1,3 +1,4 @@
+import Footer from "./footer";
 import Premium from "./premium";
 import Search from "./search";
 import Topics from "./topics";
@@ -11,6 +12,7 @@ export default function Rightbar() {
             <Premium />
             <Topics />
             <WhoFollow />
+            <Footer />
         </div>
     )
 }

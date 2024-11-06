@@ -16,5 +16,6 @@ export const whoFollowUsers = [
         username: 'zxczc',
         fullName: 'zcxzxczc',
         avatar: 'https://pbs.twimg.com/profile_images/1775365313996972033/UOAQarfj_400x400.jpg',
+        verified: true,
     }
 ]
