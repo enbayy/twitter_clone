@@ -18,8 +18,10 @@ export default function MainLayout() {
 
             document.documentElement.style.setProperty('--color-primary', appearance.color.primary);
             document.documentElement.style.setProperty('--color-secondary', appearance.color.secondary);
+            document.documentElement.style.setProperty('--color-base', appearance.color.base);
+            document.documentElement.style.setProperty('--color-base-secondary', appearance.color.baseSecondary);
 
-            document.documentElement.style.setProperty('--font-size', appearance.fontSize);
+            document.documentElement.style.setProperty('--font-size', appearance.fontSize + 'px');
         }
     }, [appearance]);
 
@@ -28,7 +30,7 @@ export default function MainLayout() {
             {modal && <Modal />}
             <Sidebar />
             <main className="flex-1 flex gap-[30px]">
-                <main className="flex-1 max-w-[600px] border-x border-[#2f3336]">
+                <main className="flex-1 max-w-[600px] border-x border-[color:var(--background-third)]">
                     <Outlet />
                 </main>
             </main>
