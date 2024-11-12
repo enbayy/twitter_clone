@@ -1,12 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    /* 
-    KOYU
+
     backgroundColor: {
+        name: 'darker',
         primary: '#000',
         secondary: '#16181c',
-        third: '#273340'
+        third: '#212327',
+        modal: '#5b708366'
     },
     color: {
         primary: '#1d9bf0',
@@ -14,14 +15,16 @@ const initialState = {
         base: '#e7e9ea',
         baseSecondary: '#71767b'
     },
-    fontSize: 16,
-*/
+    boxShadow: 'rgba(255,255,255,0.2) 0px 0px 15px, rgba(255,255,255,0.15) 0px 0px 3px 1px',
+    fontSize: 16
+
     /*
     AZ KOYU
         backgroundColor: {
             primary: '#15202b',
             secondary: '#1e2732',
-            third: '#263340'
+            third: '#263340',
+            modal: '#5b708366'
         },
         color: {
             primary: '#1d9bf0',
@@ -29,20 +32,24 @@ const initialState = {
             base: '#f7f9f9',
             baseSecondary: '#8b98a5'
         },
-        fontSize: 16
+        boxShadow: 'rgba(255,255,255,0.2) 0px 0px 15px, rgba(255,255,255,0.15) 0px 0px 3px 1px',
+        fontSize: 16    
         */
-    backgroundColor: {
-        primary: '#fff',
-        secondary: '#f7f9f9',
-        third: '#eff3f4'
-    },
-    color: {
-        primary: '#1d9bf0',
-        secondary: '#8ecdf8',
-        base: '#0f1419',
-        baseSecondary: '#8b98a5'
-    },
-    fontSize: 16
+
+    // backgroundColor: {
+    //     primary: '#fff',
+    //     secondary: '#f7f9f9',
+    //     third: '#eff3f4',
+    //     modal: '#00000066'
+    // },
+    // color: {
+    //     primary: '#1d9bf0',
+    //     secondary: '#8ecdf8',
+    //     base: '#0f1419',
+    //     baseSecondary: '#536471'
+    // },
+    // boxShadow: 'rgba(255,255,255,0.2) 0px 0px 15px, rgba(255,255,255,0.15) 0px 0px 3px 1px',
+    // fontSize: 16
 }
 
 const appearance = createSlice({
@@ -58,9 +65,12 @@ const appearance = createSlice({
         _setFontSize: (state, action) => {
             state.fontSize = action.payload
         },
+        _setBoxShadow: (state, action) => {
+            state.boxShadow = action.payload
+        },
     }
 })
 
-export const { _setBackgroundColor, _setColor, _setFontSize } = appearance.actions
+export const { _setBackgroundColor, _setColor, _setFontSize, _setBoxShadow } = appearance.actions
 
 export default appearance.reducer
