@@ -47,7 +47,7 @@ export default function AppearanceModal({ close }) {
 
                 <div>
                     <h6 className="text-[color:var(--color-base-secondary)] mb-1 leading-5 text-[13px] font-bold">Arka plan</h6>
-                    <div className="py-1 px-3 mb-3 grid gap-1 grid-cols-3 bg-[color:var(--background-secondary)] rounded-2xl">
+                    <div className="py-2 px-4 mb-3 grid gap-2 grid-cols-3 bg-[color:var(--background-secondary)] rounded-2xl">
                         <button
                             onClick={() => {
                                 setColor({
@@ -64,10 +64,27 @@ export default function AppearanceModal({ close }) {
                                 })
                                 setBoxShadow('rgba(255,255,255,0.2) 0px 0px 15px, rgba(255,255,255,0.15) 0px 0px 3px 1px')
                             }}
-                            className={classNames("h-16 px-5 bg-white text-[#0f1419] border-1 font-bold border-white/10 rounded", {
-                                "border-[color:var(--color-primary)]": backgroundColor.name === 'light'
+                            className={classNames("h-16 pr-3 pl-2 bg-white text-[#0f1419] border-1 font-bold border-white/10 rounded group flex items-center gap-1.5", {
+                                "border-[color:var(--color-primary)] !border-2": backgroundColor.name === 'light'
                             })}
                         >
+                            <div className="w-10 h-10 rounded-full flex-shrink-0 group-hover:bg-black/5 flex items-center justify-center">
+                                <div className={classNames("w-5 h-5 rounded-full border-2 border-[#5c6e7e] flex items-center justify-center", {
+                                    "!border-[color:var(--color-primary)] !bg-[color:var(--color-primary)] text-white": backgroundColor.name === 'light'
+                                })}>
+                                    {
+                                        backgroundColor.name === 'light' &&
+                                        (
+                                            <svg viewBox="0 0 24 24">
+                                                <path
+                                                    fill="currentColor"
+                                                    d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z"
+                                                />
+                                            </svg>
+                                        )
+                                    }
+                                </div>
+                            </div>
                             Varsayılan
                         </button>
                         <button
@@ -86,10 +103,27 @@ export default function AppearanceModal({ close }) {
                                 })
                                 setBoxShadow('rgba(255,255,255,0.2) 0px 0px 15px, rgba(255,255,255,0.15) 0px 0px 3px 1px')
                             }}
-                            className={classNames("h-16 px-5 bg-[#15202b] text-[#f7f9f9] border-1 font-bold border-white/10 rounded", {
-                                "!border-[color:var(--color-primary)]": backgroundColor.name === 'dark'
+                            className={classNames("h-16 pr-3 pl-2 bg-[#15202b] text-[#f7f9f9] border font-bold border-white/10 rounded group flex items-center gap-1.5", {
+                                "!border-[color:var(--color-primary)] !border-2": backgroundColor.name === 'dark'
                             })}
                         >
+                            <div className="w-10 h-10 rounded-full flex-shrink-0 group-hover:bg-white/5 flex items-center justify-center">
+                                <div className={classNames("w-5 h-5 rounded-full border-2 border-[#5c6e7e] flex items-center justify-center", {
+                                    "!border-[color:var(--color-primary)] !bg-[color:var(--color-primary)] text-white": backgroundColor.name === 'dark'
+                                })}>
+                                    {
+                                        backgroundColor.name === 'dark' &&
+                                        (
+                                            <svg viewBox="0 0 24 24">
+                                                <path
+                                                    fill="currentColor"
+                                                    d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z"
+                                                />
+                                            </svg>
+                                        )
+                                    }
+                                </div>
+                            </div>
                             Loş
                         </button>
                         <button
@@ -108,10 +142,27 @@ export default function AppearanceModal({ close }) {
                                 })
                                 setBoxShadow('rgba(255,255,255,0.2) 0px 0px 15px, rgba(255,255,255,0.15) 0px 0px 3px 1px')
                             }}
-                            className={classNames("h-16 px-5 bg-black text-[#f7f9f9] border-1 font-bold border-white/10 rounded", {
-                                "!border-[color:var(--color-primary)]": backgroundColor.name === 'darker'
+                            className={classNames("h-16 pr-3 pl-2 bg-black text-[#f7f9f9] border-1 font-bold border-white/10 rounded group flex items-center gap-1.5", {
+                                "!border-[color:var(--color-primary)] !border-2": backgroundColor.name === 'darker'
                             })}
                         >
+                            <div className="w-10 h-10 rounded-full flex-shrink-0 group-hover:bg-white/10 flex items-center justify-center">
+                                <div className={classNames("w-5 h-5 rounded-full border-2 border-[#3e4144] flex items-center justify-center", {
+                                    "!border-[color:var(--color-primary)] !bg-[color:var(--color-primary)] text-white": backgroundColor.name === 'darker'
+                                })}>
+                                    {
+                                        backgroundColor.name === 'darker' &&
+                                        (
+                                            <svg viewBox="0 0 24 24">
+                                                <path
+                                                    fill="currentColor"
+                                                    d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z"
+                                                />
+                                            </svg>
+                                        )
+                                    }
+                                </div>
+                            </div>
                             Işıklar kapalı
                         </button>
                     </div>
